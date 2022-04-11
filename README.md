@@ -8,10 +8,10 @@ Detects location (/loc) commands within Everquest using the log file. From this 
 - Dynamically include waypoint data if available waypoint is either inline (w/in 20deg +/-) with current heading or w/in 500 units
 - Waypoints calculate accuracy (0.0 indicates perfect path), distance, and time to destination
 
-## Setup:
+## Setup
 Change log_path on line 15 to reflect your current Everquest Logs directory with the trailing slash (e.g. 'C:/EQ/Logs/'). No other changes should be needed!
 
-If you have waypoints that are not currently include in (EQWaypoints.py)
+If you have waypoints that are not currently included you can add them to the [waypoints file](EQWaypoints.py).
 
 ## Output:
 
