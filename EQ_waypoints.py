@@ -26,6 +26,21 @@ waypoints = {
         'waypoint': 'Severilous',
         'y':2500.0,
         'x':3480.0
+        },
+        {
+        'waypoint': 'Field of Bone Zoneline',
+        'y':-1820.0,
+        'x':5330.0
+        },
+        {
+        'waypoint': 'Druid Portal',
+        'y':-3100.0,
+        'x':3500.0
+        },
+        {
+        'waypoint': 'Wizard Portal',
+        'y':-1250.0,
+        'x':3500.0
         }
     ]
 }

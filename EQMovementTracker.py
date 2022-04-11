@@ -115,10 +115,11 @@ while True:
                     wp_y = float(waypoint['y'])
                     wp_dist = math.sqrt(((wp_x-x1) ** 2) +  ((wp_y-y1) ** 2))
                     wp_time = wp_dist // speed
-                    wp_comp, wp_degs = direction_lookup(wp_x, x1, wp_y, y1)
-                    wp_offset = wp_degs - degrees_heading
-                    wp_offset = (wp_offset + 180) % 360 - 180
-                    waypoint_message += f"\n{waypoint['waypoint']} ({wp_x},{wp_y}) - Accuracy: {round(wp_offset, 1)} - Dist: {round(wp_dist,2)} - Time: {wp_time} seconds"
+                    wp_comp, wp_degs = direction_lookup(x2, wp_x, wp_y, y2)
+                    wp_offset = round((wp_degs - degrees_heading), 1)
+                    if wp_dist < 200 or abs(wp_offset) < 20:
+                        waypoint_message += f"\n{waypoint['waypoint']} Accuracy: {wp_offset} Distance: {wp_dist} Time: {wp_time}"
+                    #waypoint_message += f"\n{waypoint['waypoint']} ({wp_x},{wp_y}) - Accuracy: {round(wp_offset, 1)} - Dist: {round(wp_dist,2)} - Time: {wp_time} seconds"
             else:
                 waypoint_message = '\n' + waypoints
             
