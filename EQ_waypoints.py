@@ -11,7 +11,7 @@ waypoints = {
         'x':380.0
         }
     ],
-    'Emerald Jungle':[
+    'The Emerald Jungle':[
         {
         'waypoint': 'Trakanon\'s Teeth Zoneline',
         'y':-3425.0,
