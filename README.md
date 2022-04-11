@@ -6,4 +6,4 @@ Change log_path on line 15 to reflect your current Everquest Logs directory with
 
 Output:
 
-![image](https://user-images.githubusercontent.com/6036049/162823934-fb5134da-351e-4126-a18f-25615c748a48.png)
+![image](https://user-images.githubusercontent.com/6036049/162824372-99c8bc00-3d1c-4383-a6d5-4590095849e6.png)
