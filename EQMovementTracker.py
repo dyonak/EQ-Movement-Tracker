@@ -7,12 +7,9 @@ import EQ_waypoints
 ###DONE###
 #open log scan for new entries
 #determine location, speed, heading and current zone
-
-###FUTURE###
-#Monitor all logfiles and open the one that's been written most recently
-#Add a list of key landmarks (e.g. - in EJ trakanon spawns at x, y, z)
-#update calculation to see if the character is heading toward any landmarks in the current zone (use latest "You have entered..." message)
-#print additional line only if heading toward a landmark with 75% or greater accuracy
+#scan for most recently modified log and dynamically switch
+#Read from waypoints list to display relevant (close or directionally identified) waypoints
+#For relevant waypoints display accuracy, distance and time to destination
 
 toon = ''
 log_path = 'C:/Everquest/Logs/'
