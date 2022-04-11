@@ -9,6 +9,11 @@ waypoints = {
         'waypoint': 'Dragon Necropolis Zoneline',
         'y':-2800.0,
         'x':380.0
+        },
+        {
+        'waypoint': 'Siren\'s Grotto Zoneline',
+        'y':-4100.0,
+        'x':-3900.0
         }
     ],
     'The Emerald Jungle':[
