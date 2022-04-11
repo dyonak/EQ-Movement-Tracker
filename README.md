@@ -2,6 +2,7 @@
 Detects location (/loc) commands within Everquest using the log file. From this the script with determine direction, speed, etc. and load waypoints for the given zone to help guide you to them.
 
 ## Features
+- No modules needed, all functionality provided by Python's built in modules
 - Dynamically switch between characters based on modified time of character log files
 - Update current zone with a /who command
 - Calculate and display toon, zone, location, heading, compass direction, and speed
