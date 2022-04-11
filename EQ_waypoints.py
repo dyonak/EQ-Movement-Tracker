@@ -11,16 +11,21 @@ waypoints = {
         'x':380.0
         }
     ],
-    'Western Wastes2':[
+    'Emerald Jungle':[
         {
-        'waypoint': 'Temple of Veeshan Zoneline',
-        'y':700.0,
-        'x':700.0
+        'waypoint': 'Trakanon\'s Teeth Zoneline',
+        'y':-3425.0,
+        'x':1570.0
         },
         {
-        'waypoint': 'Dragon Necropolis Zoneline',
-        'y':-2800.0,
-        'x':380.0
+        'waypoint': 'City of Mist Zoneline',
+        'y':299.0,
+        'x':-1972.0
+        },
+        {
+        'waypoint': 'Severilous',
+        'y':2500.0,
+        'x':3480.0
         }
     ]
 }
