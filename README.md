@@ -9,7 +9,7 @@ Detects location (/loc) commands within Everquest using the log file. From this 
 - Waypoints calculate accuracy (0.0 indicates perfect path), distance, and time to destination
 
 ## Setup
-Change log_path on line 15 to reflect your current Everquest Logs directory with the trailing slash (e.g. 'C:/EQ/Logs/'). No other changes should be needed!
+Change log_path to reflect your current Everquest Logs directory **with the trailing slash** (e.g. 'C:/EQ/Logs/'). No other changes should be needed!
 
 If you have waypoints that are not currently included you can add them to the [waypoints file](EQWaypoints.py).
 
