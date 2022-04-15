@@ -106,6 +106,7 @@ while True:
                 speed = round(distance / timedelta.total_seconds(), 2)
             cls()
             waypoint_message = ''
+            
             if isinstance(waypoints,list):
                 for waypoint in waypoints:
                     wp_x = float(waypoint['x'])
@@ -115,17 +116,13 @@ while True:
                     wp_comp, wp_degs = direction_lookup(x2, wp_x, wp_y, y2)
                     wp_offset = round((wp_degs - degrees_heading), 1)
                     if wp_dist < 500 or abs(wp_offset) < 20:
-                        waypoint_message += f"\n{waypoint['waypoint']}: Accuracy - {wp_offset} Distance - {round(wp_dist)} Time - {wp_time}"
-                    #waypoint_message += f"\n{waypoint['waypoint']} ({wp_x},{wp_y}) - Accuracy: {round(wp_offset, 1)} - Dist: {round(wp_dist,2)} - Time: {wp_time} seconds"
+                        waypoint_message += f"\n{waypoint['waypoint']} = Accuracy: {-wp_offset} Distance: {round(wp_dist)} Time: {wp_time}"
             else:
                 waypoint_message = '\n' + waypoints
             
             print(f'''
-Toon: {toon[6:-16]}
-Zone: {zone_name}
-Loc: {x2}, {y2}
-Compass: {compass_heading} / {round(degrees_heading, 1)}°
-Speed: {speed}
+Toon: {toon[6:-16]} Zone: {zone_name} Loc: {x2}, {y2}
+Compass: {compass_heading} / {round(degrees_heading, 1)}° Speed: {speed}
 Waypoints: {waypoint_message}
             ''')
             
