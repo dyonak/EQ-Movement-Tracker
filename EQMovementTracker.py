@@ -71,10 +71,11 @@ while True:
     #Message content of the most recent log entry
     log_message = last_log[27:]
 
-    #Look for zone name
+    #Look for zone name after zoning
     if last_log[27:43] == "You have entered":
         zone_name = last_log[44:-1]
         waypoints = EQ_waypoints.return_waypoints(zone_name)
+    #Look for zone name from /who command (will also change incorrectly based of /who all 'zone_name')
     if last_log[27:33] == "There ":
         zone_name = ''
         words = log_message.split()
@@ -95,25 +96,30 @@ while True:
 
         #Location has been detected, check to see if it's different from previous
         if previous_coords[1] != coordinates[1] or previous_coords[0] != coordinates[0]:
-            #New coord detected, update coordinates and time and calculate distance, headings, and speed
+            #New coord detected, update coordinates
             y2, x2, z2 = coordinates
             y1, x1, z1 = previous_coords
+
+            #Calculate distance, headings, get time and time delta
             distance = math.sqrt(((x2-x1) ** 2) +  ((y2-y1) ** 2))
             compass_heading, degrees_heading = direction_lookup(x1, x2, y2, y1) #x coords reversed to fix EQ's inverse x scale
             current_time = datetime.datetime.now()
             timedelta = current_time - previous_time
+
+            #Calculate speed
             if timedelta.total_seconds() != 0:
                 speed = round(distance / timedelta.total_seconds(), 2)
             cls()
-            waypoint_message = ''
             
+            #Check for existance of waypoints in EQ_waypoints.py
+            waypoint_message = ''
             if isinstance(waypoints,list):
                 for waypoint in waypoints:
                     wp_x = float(waypoint['x'])
                     wp_y = float(waypoint['y'])
                     wp_dist = math.sqrt(((wp_x-x1) ** 2) +  ((wp_y-y1) ** 2))
                     wp_time = wp_dist // speed
-                    wp_comp, wp_degs = direction_lookup(x2, wp_x, wp_y, y2)
+                    wp_comp, wp_degs = direction_lookup(x2, wp_x, wp_y, y2) #x coords reversed to fix EQ's inverse x scale
                     wp_offset = round((wp_degs - degrees_heading), 1)
                     if wp_dist < 500 or abs(wp_offset) < 20:
                         waypoint_message += f"\n{waypoint['waypoint']} = Accuracy: {-wp_offset} Distance: {round(wp_dist)} Time: {wp_time}"
