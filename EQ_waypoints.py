@@ -16,6 +16,23 @@ waypoints = {
         'x':-3900.0
         }
     ],
+    'Skyfire Mountains':[
+        {
+        'waypoint': 'Veeshan\'s Peak Zoneline',
+        'y':3400.0,
+        'x':3000.0
+        },
+        {
+        'waypoint': 'Burning Woods Zoneline',
+        'y':4000.0,
+        'x':1500.0
+        },
+        {
+        'waypoint': 'Overthere Zoneline',
+        'y':-1140.0,
+        'x':-4290.0
+        }
+    ],
     'The Emerald Jungle':[
         {
         'waypoint': 'Trakanon\'s Teeth Zoneline',
