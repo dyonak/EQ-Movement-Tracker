@@ -33,6 +33,28 @@ waypoints = {
         'x':-4000.0
         }
     ],
+    'The Wakening Land':[
+        {
+        'waypoint': 'Plane of Growth Tree',
+        'y':465.0,
+        'x':-1069.0
+        },
+        {
+        'waypoint': 'Kael Zoneline',
+        'y':-673.0,
+        'x':-5000.0
+        },
+        {
+        'waypoint': 'Portal/Ring',
+        'y':-3000.0,
+        'x':-3000.0
+        },
+        {
+        'waypoint': 'Skyshrine Zoneline',
+        'y':1450.0,
+        'x':4500.0
+        }
+    ],
     'The Emerald Jungle':[
         {
         'waypoint': 'Trakanon\'s Teeth Zoneline',
